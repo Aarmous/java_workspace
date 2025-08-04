@@ -16,6 +16,7 @@ class C1{
 	}
 	void instMetho_instVar(){		 
 		System.out.println(instVar);
+		
 	}
 }
 class ClassMemberDemo {	

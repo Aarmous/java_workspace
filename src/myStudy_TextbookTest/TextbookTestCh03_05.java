@@ -1,4 +1,4 @@
-package myStudy;
+package myStudy_TextbookTest;
 
 public class TextbookTestCh03_05 {
 

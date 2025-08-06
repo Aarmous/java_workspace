@@ -16,22 +16,20 @@ public class UpCastingDemo {
 
 		SportsPlayer sp = new SportsPlayer();
 		downcast(sp);
-		
-		
+
 		Person[] pArr = new Person[4];
 		pArr[0] = new Student();
 		pArr[1] = new Employee();
 		pArr[2] = new SportsPlayer();
-		pArr[3] = new 
+		pArr[3] = new Entertainer();
 		// 위에 Person 으로 형변환 배열을 만들었기에, 밑에 세개의 메소드가 대체된다.
 //		Student[] sArr = new Student[3];
 //		Employee[] eArr = new Employee[3];
 //		SportsPlayer[] spArr = new SportsPlayer[3];
-				
+
 		for (Person person : pArr) {
 			person.whoAmI();
 		}
-		
 
 	}
 

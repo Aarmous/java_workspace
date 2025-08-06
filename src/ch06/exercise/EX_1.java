@@ -1,6 +1,6 @@
-package ch06;
+package ch06.exercise;
 
-public class ProgramingTest1Demo {
+public class EX_1 {
 
 	public static void main(String[] args) {
 		Circle cir = new Circle(5);

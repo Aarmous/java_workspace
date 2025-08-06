@@ -22,8 +22,8 @@ public class ArrayDemo1 {
 		for (int score : scores) {
 			sum += score;
 		}
-//		System.out.printf("학생 %d명의 점수의 합은 %d 입니다. \n", i, sum);
-//		System.out.printf("학생 %d명의 점수의 평균은 %.2f 입니다. \n", scores.length, (sum / (double) scores.length));
+		System.out.printf("학생 %d명의 점수의 합은 %d 입니다. \n", scores.length, sum);
+		System.out.printf("학생 %d명의 점수의 평균은 %.2f 입니다. \n", scores.length, (sum / (double) scores.length));
 
 	}
 

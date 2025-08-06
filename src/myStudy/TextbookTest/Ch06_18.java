@@ -1,6 +1,6 @@
 package myStudy.TextbookTest;
 
-public class TextbookTestCh06_18 {
+public class Ch06_18 {
 
 	public static void main(String[] args) {
 		ShopService obj1 = ShopService.getInstance();

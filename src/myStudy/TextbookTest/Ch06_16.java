@@ -20,7 +20,7 @@ class Printer {
 }
 
 
-public class TextbookTestCh06_16 {
+public class Ch06_16 {
 
 	public static void main(String[] args) {
 		Printer.println(10);

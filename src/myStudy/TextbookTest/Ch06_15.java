@@ -1,6 +1,6 @@
 package myStudy.TextbookTest;
 
-public class TextbookTestCh06_15 {
+public class Ch06_15 {
 
 	public static void main(String[] args) {
 		MemberService memberService = new MemberService();

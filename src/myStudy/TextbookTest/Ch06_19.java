@@ -1,6 +1,6 @@
 package myStudy.TextbookTest;
 
-public class TextbookTestCh06_19 {
+public class Ch06_19 {
 
 	public static void main(String[] args) {
 		Account account = new Account();

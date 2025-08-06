@@ -1,6 +1,6 @@
 package myStudy.TextbookTest;
 
-public class TextbookTestCh06_13 {
+public class Ch06_13 {
 
 	public static void main(String[] args) {
 		

@@ -1,6 +1,6 @@
 package myStudy.TextbookTest;
 
-public class TextbookTestCh03_05 {
+public class Ch03_05 {
 
 	public static void main(String[] args) {
 		int lengthTop = 5;

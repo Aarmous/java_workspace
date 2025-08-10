@@ -3,7 +3,7 @@ package myStudy.TextbookTest;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ch05_09 {
+public class ch05_09_if {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);

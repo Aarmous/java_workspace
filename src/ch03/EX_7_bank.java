@@ -2,7 +2,7 @@ package ch03;
 
 import java.util.Scanner;
 
-public class EX_7 {
+public class EX_7_bank {
 
 	public static void main(String[] args) {
 		// while 문과 Scanner 의 nextLine() 메서드를 이용해서

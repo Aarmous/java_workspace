@@ -1,0 +1,10 @@
+package ch11.exercise;
+
+public class EX_07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

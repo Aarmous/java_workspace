@@ -38,7 +38,7 @@ public class BankApplication_ch06_20_2 {
 	static void showmenu() {
 		System.out.println("ㅡㅡㅡㅡㅡㅡ BankApplication ㅡㅡㅡㅡㅡㅡ");
 		System.out.println("1.계좌생성|2.계좌목록|3.예금|4.출금|5.종료");
-		System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+		System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
 		System.out.println("메뉴 선택>");
 	}
 

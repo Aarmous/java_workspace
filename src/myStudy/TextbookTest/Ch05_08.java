@@ -2,7 +2,7 @@ package myStudy.TextbookTest;
 
 import java.util.Arrays;
 
-public class ch05_08 {
+public class Ch05_08 {
 
 	public static void main(String[] args) {
 		// 전체 합, 평균 구하기 

@@ -3,7 +3,7 @@ package myStudy.TextbookTest;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ch05_09_swich {
+public class Ch05_09_swich {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);

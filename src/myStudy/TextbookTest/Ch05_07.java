@@ -1,6 +1,6 @@
 package myStudy.TextbookTest;
 
-public class ch05_07 {
+public class Ch05_07 {
 
 	public static void main(String[] args) {
 		// 배열 내용 중, 최대값 구하

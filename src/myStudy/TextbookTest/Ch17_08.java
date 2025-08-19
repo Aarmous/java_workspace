@@ -51,26 +51,38 @@ public class Ch17_08 {
 //		    }
 //		}
 //		[개발자]
-//				{name:홍길동, job:개발자}
-//				{name:신용권, job:개발자}
+//		{name:홍길동, job:개발자}
+//		{name:신용권, job:개발자}
 //
-//				[디자이너]
-//				{name:김나리, job:디자이너}
+//		[디자이너]
+//		{name:김나리, job:디자이너}
 		
-		List<Member2> list = Arrays.asList(
-	            new Member2("홍길동", "개발자"),
-	            new Member2("김나리", "디자이너"),
-	            new Member2("신용권", "개발자")
+		List<Member3> list = Arrays.asList(
+	            new Member3("홍길동", "개발자"),
+	            new Member3("김나리", "디자이너"),
+	            new Member3("신용권", "개발자")
 	        );
+		
+		System.out.println(list);
+		System.out.println("-------------------------\n");
+		
+		list.forEach(System.out::println);
+		System.out.println("-------------------------\n");
 
-//	        Map<String, List<Member2>> groupingMap = list.stream()
-	        		list.stream().collect(Colle)
+		
+        Map<String, List<Member3>> groupingMap = list.stream()
+        		.collect(Collectors.groupingBy(Member3::getJob));
+        
+        System.out.println(groupingMap);
+        System.out.println("-------------------------\n");
 
-	        System.out.println("[개발자]");
+        System.out.println("[개발자]");
+        groupingMap.get("개발자").forEach(System.out::println);
 
-	        System.out.println();
+        System.out.println();
 
-	        System.out.println("[디자이너]");
+        System.out.println("[디자이너]");
+        groupingMap.get("디자이너").forEach(System.out::println);
 		
 		
 		
@@ -78,11 +90,11 @@ public class Ch17_08 {
 
 }
 
-class Member2 {
+class Member3 {
 	private String name;
 	private String job;
 
-	public Member2(String name, String job) {
+	public Member3(String name, String job) {
 		this.name = name;
 		this.job = job;
 	}

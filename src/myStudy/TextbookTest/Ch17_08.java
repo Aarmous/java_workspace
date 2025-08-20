@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class Ch17_08 {
 
 	public static void main(String[] args) {
-		
+
 //		List에 저장되어 있는 Member를 직업별로 그룹핑해서 Map<String,List<Member>> 객체로 생성하려고 합니다. 
 //		키는 Member의 직업이고, 값은 해당 직업을 갖는 Member들을 저장하고 있는 List입니다. 
 //		실행 결과를 보고 빈칸에 알맞은 코드를 작성해보세요.
@@ -56,36 +56,29 @@ public class Ch17_08 {
 //
 //		[디자이너]
 //		{name:김나리, job:디자이너}
-		
-		List<Member3> list = Arrays.asList(
-	            new Member3("홍길동", "개발자"),
-	            new Member3("김나리", "디자이너"),
-	            new Member3("신용권", "개발자")
-	        );
-		
+
+		List<Member3> list = Arrays.asList(new Member3("홍길동", "개발자"), new Member3("김나리", "디자이너"),
+				new Member3("신용권", "개발자"));
+
 		System.out.println(list);
 		System.out.println("-------------------------\n");
-		
+
 		list.forEach(System.out::println);
 		System.out.println("-------------------------\n");
 
-		
-        Map<String, List<Member3>> groupingMap = list.stream()
-        		.collect(Collectors.groupingBy(Member3::getJob));
-        
-        System.out.println(groupingMap);
-        System.out.println("-------------------------\n");
+		Map<String, List<Member3>> groupingMap = list.stream().collect(Collectors.groupingBy(Member3::getJob));
 
-        System.out.println("[개발자]");
-        groupingMap.get("개발자").forEach(System.out::println);
+		System.out.println(groupingMap);
+		System.out.println("-------------------------\n");
 
-        System.out.println();
+		System.out.println("[개발자]");
+		groupingMap.get("개발자").forEach(System.out::println);
 
-        System.out.println("[디자이너]");
-        groupingMap.get("디자이너").forEach(System.out::println);
-		
-		
-		
+		System.out.println();
+
+		System.out.println("[디자이너]");
+		groupingMap.get("디자이너").forEach(System.out::println);
+
 	}
 
 }

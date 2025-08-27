@@ -27,16 +27,10 @@ public class PractiField {
 		animal.setSpecies(sp);
 		System.out.println(animal);
 
-		
 		Scanner inn = new Scanner(System.in);
 		System.out.println("동물 성별(수컷/암컷) : ");
 		String ingen = inn.nextLine().trim();
-		if (Gender)
-		String gen = inn.nextLine();
-		
-		AnimalEnum.
-		
-		
+
 	}
 
 }

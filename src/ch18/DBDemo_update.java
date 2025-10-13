@@ -10,13 +10,11 @@ public class DBDemo_update {
 	public static void main(String[] args) throws SQLException {
 		Connection conn = makeConnection();
 		// 3. preparedstatement 인터페이스 사용
-		String sql = "insert into person (name, phone, email) values (?, ?, ?)";
+		String sql = "update book set bookname = ? where bookid = ?";
 
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, "테스트");
-		pstmt.setString(2, "010-4444-4444");
-		pstmt.setString(3, "d@naver.com");
-
+		pstmt.setString(1, "축구 아는 여자");
+		pstmt.setInt(2, 2);
 		// 4. sql 문 실행
 		if (pstmt.executeUpdate() == 1) {
 			System.out.println("레코드 수정 성공");
@@ -30,7 +28,7 @@ public class DBDemo_update {
 	}
 
 	public static Connection makeConnection() {
-		String url = "jdbc:mysql://localhost:3306/testdb?serverTimezone=Asia/Seoul";
+		String url = "jdbc:mysql://localhost:3306/madang?serverTimezone=Asia/Seoul";
 		Connection conn = null;
 
 		// 1. 드라이버 로드

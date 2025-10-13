@@ -2,27 +2,25 @@ package ch18;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
-public class DBDemo3 {
+public class DBDemo_insert_Statement {
 
 	public static void main(String[] args) throws SQLException {
 		Connection conn = makeConnection();
-		// 3. preparedstatement 인터페이스 사용
-		String sql = "update person set phone = ? where id = ?";
+		// 3. statement 객체 생성
+		Statement stmt = conn.createStatement(); // 데이터 넣어서 던지는 스트림
 
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, "a@google.com");
-		pstmt.setInt(2, 1);
+		String sql = "insert into person (name, phone, email) values ('ddd', '010-2111-2112', 'd@naver.com')";
 		// 4. sql 문 실행
-		if (pstmt.executeUpdate() == 1) {
+		if (stmt.executeUpdate(sql) == 1) {
 			System.out.println("레코드 추가 성공");
 		} else {
 			System.out.println("레코드 추가 실패");
 		}
 		// 5. 연결 종료
-		pstmt.close();
+		stmt.close();
 		conn.close();
 
 	}

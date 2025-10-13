@@ -2,6 +2,7 @@ package madang;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Madang {
@@ -37,6 +38,7 @@ public class Madang {
 			case "1" -> bookManagement(in, conn);
 			case "2" -> customerManagement(in, conn);
 			case "3" -> orderManagement(in, conn);
+			default -> System.out.println("x");
 			}
 
 		}
@@ -60,9 +62,15 @@ public class Madang {
 			}
 			switch (menu) {
 			case "1" -> Book.createBook(in, conn);
-			case "2" -> Book.listBook(conn);
-			case "3" -> Book.updateBook();
-			case "4" -> Book.deleteBook();
+			case "2" -> {
+				List<Book> books = Book.listBook(conn);
+				for (Book b : books) {
+					System.out.println(b);
+				}
+			}
+			case "3" -> Book.updateBook(in, conn);
+			case "4" -> Book.deleteBook(in, conn);
+			default -> System.out.println("x");
 			}
 
 		}

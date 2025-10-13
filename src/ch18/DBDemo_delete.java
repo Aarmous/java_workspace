@@ -10,16 +10,16 @@ public class DBDemo_delete {
 	public static void main(String[] args) throws SQLException {
 		Connection conn = makeConnection();
 		// 3. preparedstatement 인터페이스 사용
-		String sql = "delete from person where id = ?";
+		String sql = "delete from book where bookid = ?";
 
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setInt(1, 1);
+		pstmt.setString(1, "14");
 
 		// 4. sql 문 실행
 		if (pstmt.executeUpdate() == 1) {
-			System.out.println("레코드 삭제 성공");
+			System.out.println("도서 삭제 성공");
 		} else {
-			System.out.println("레코드 삭제 실패");
+			System.out.println("도서 삭제 실패");
 		}
 		// 5. 연결 종료
 		pstmt.close();
@@ -28,7 +28,7 @@ public class DBDemo_delete {
 	}
 
 	public static Connection makeConnection() {
-		String url = "jdbc:mysql://localhost:3306/testdb?serverTimezone=Asia/Seoul";
+		String url = "jdbc:mysql://localhost:3306/madang?serverTimezone=Asia/Seoul";
 		Connection conn = null;
 
 		// 1. 드라이버 로드

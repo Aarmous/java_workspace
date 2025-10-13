@@ -2,31 +2,37 @@ package ch18;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public class DBDemo {
+public class DBDemo_insert_PreparedStatement {
 
 	public static void main(String[] args) throws SQLException {
 		Connection conn = makeConnection();
-		// 3. statement 객체 생성
-		Statement stmt = conn.createStatement(); // 데이터 넣어서 던지는 스트림
 
-		String sql = "insert into person (name, phone, email) values ('손흥민', '010-2222-2222', 'b@naver.com')";
+		// 3. preparedstatement 인터페이스 사용
+		String sql = "insert into book (bookid, bookname, publisher, price) values (?, ?, ?, ?)";
+
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, 13);
+		pstmt.setString(2, "올림픽");
+		pstmt.setString(3, "당");
+		pstmt.setInt(4, 10000);
+
 		// 4. sql 문 실행
-		if (stmt.executeUpdate(sql) == 1) {
-			System.out.println("레코드 추가 성공");
+		if (pstmt.executeUpdate() == 1) {
+			System.out.println("레코드 수정 성공");
 		} else {
-			System.out.println("레코드 추가 실패");
+			System.out.println("레코드 수정 실패");
 		}
 		// 5. 연결 종료
-		stmt.close();
+		pstmt.close();
 		conn.close();
 
 	}
 
 	public static Connection makeConnection() {
-		String url = "jdbc:mysql://localhost:3306/testdb?serverTimezone=Asia/Seoul";
+		String url = "jdbc:mysql://localhost:3306/madang?serverTimezone=Asia/Seoul";
 		Connection conn = null;
 
 		// 1. 드라이버 로드
